@@ -1,0 +1,11 @@
+.mainBodyDesc {
+  font-family: "Inter-Light";
+  background-color: #f4ffb0;
+  color: black;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+  text-align: center;
+  font-size: 1.5rem;
+}

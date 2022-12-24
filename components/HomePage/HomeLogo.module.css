@@ -1,0 +1,36 @@
+.mainLogo {
+  background-color: #dbffca;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 24rem;
+}
+
+.fname {
+  position: relative;
+  font-family: "Inter";
+  color: black;
+  font-weight: 400;
+  font-size: 7rem;
+}
+
+.lname {
+  position: relative;
+  font-family: "Inter";
+  color: #30d35d;
+  font-weight: 400;
+  font-size: 7.778rem;
+  top: -3.6rem;
+  text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.description {
+  color: black;
+  position: relative;
+  top: -2.5rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: center;
+  left: 0.5rem;
+}
