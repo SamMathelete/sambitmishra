@@ -1,16 +1,13 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { FC } from "react";
 import classes from "./Header.module.css";
 
 const Header: FC = () => {
-  const router = useRouter();
-  console.log(router.pathname);
   return (
     <header className={classes.header}>
       <nav>
         <ul>
-          <li className={classes.active}>
+          <li>
             <Link href="/">Home</Link>
           </li>
           <li>
