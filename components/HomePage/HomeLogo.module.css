@@ -79,3 +79,20 @@
     top: -3rem;
   }
 }
+
+/*browser dark mode*/
+@media (prefers-color-scheme: dark) {
+  .mainLogo {
+    background-color: #1a1a1a;
+  }
+  .fname {
+    color: white;
+  }
+  .lname {
+    color: #30d35d;
+    text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+  }
+  .description {
+    color: white;
+  }
+}

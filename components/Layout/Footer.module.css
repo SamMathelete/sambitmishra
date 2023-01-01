@@ -78,3 +78,14 @@
     padding-bottom: 5rem;
   }
 }
+
+/*browser dark mode*/
+@media (prefers-color-scheme: dark) {
+  .mainDiv {
+    background-color: #526c12;
+  }
+
+  .text {
+    color: rgb(200, 255, 0);
+  }
+}

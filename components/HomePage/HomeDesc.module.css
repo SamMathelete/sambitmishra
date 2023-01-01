@@ -32,3 +32,11 @@
     font-size: 2rem;
   }
 }
+
+/*browser dark mode*/
+@media (prefers-color-scheme: dark) {
+  .mainBodyDesc {
+    background-color: #2d320d;
+    color: white;
+  }
+}
