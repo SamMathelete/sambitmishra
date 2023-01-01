@@ -52,7 +52,6 @@ const Header: FC = () => {
         </motion.nav>
       </motion.header>
       <header className={classes.mobileHeader}>
-        {/*menu button*/}
         <button className={classes.menuBtn} onClick={toggleDrawer(true)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +59,7 @@ const Header: FC = () => {
             height="40"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="currentColor"
+            stroke="black"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
