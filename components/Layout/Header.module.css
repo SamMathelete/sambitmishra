@@ -7,6 +7,10 @@
   background-color: #dbffca;
 }
 
+.menusvg {
+  stroke: black;
+}
+
 .header ul {
   list-style: none;
   margin: 0;
@@ -41,7 +45,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #dbffca;
 }
 
 /*drawer list*/
@@ -136,7 +139,7 @@
   }
 
   .drawer a {
-    color: white;
+    color: black;
   }
 
   .drawer a:hover {
@@ -153,5 +156,9 @@
 
   .mobileHeader a:hover {
     color: #4100fc;
+  }
+
+  .menusvg {
+    stroke: white;
   }
 }

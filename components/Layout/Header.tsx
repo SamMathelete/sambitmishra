@@ -17,7 +17,6 @@ const Header: FC = () => {
       ) {
         return;
       }
-
       setDrawer(open);
     };
   return (
@@ -59,11 +58,10 @@ const Header: FC = () => {
             height="40"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="black"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="feather feather-menu"
+            className={classes.menusvg}
           >
             <line x1="3" y1="12" x2="21" y2="12"></line>
             <line x1="3" y1="6" x2="21" y2="6"></line>
