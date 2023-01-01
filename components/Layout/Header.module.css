@@ -88,6 +88,10 @@
 .mobileHeader {
   display: none;
   padding: 1.5rem;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #dbffca;
 }
 
 /*responsive header*/
