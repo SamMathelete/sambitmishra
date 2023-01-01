@@ -7,10 +7,8 @@ import Header from "../components/Layout/Header";
 const HomePage: FC = () => {
   return (
     <>
-      <Header />
       <HomeLogo />
       <HomeDesc />
-      <Footer />
     </>
   );
 };

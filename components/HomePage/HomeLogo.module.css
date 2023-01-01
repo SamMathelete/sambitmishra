@@ -34,3 +34,10 @@
   text-align: center;
   left: 0.5rem;
 }
+
+.name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
