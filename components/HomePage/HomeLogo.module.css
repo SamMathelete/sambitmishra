@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 24rem;
+  height: 30rem;
 }
 
 .fname {
@@ -40,4 +40,41 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/*responsive text and div*/
+@media (max-width: 768px) {
+  .mainLogo {
+    height: 20rem;
+    padding-bottom: 3rem;
+  }
+  .fname {
+    font-size: 6rem;
+  }
+  .lname {
+    font-size: 6.5rem;
+    top: -3rem;
+  }
+  .description {
+    font-size: 1.75rem;
+    top: -1.5rem;
+  }
+}
+
+/*responsive for big screens*/
+@media (min-width: 1440px) {
+  .mainLogo {
+    height: 40rem;
+  }
+  .fname {
+    font-size: 8rem;
+  }
+  .lname {
+    font-size: 9rem;
+    top: -4rem;
+  }
+  .description {
+    font-size: 3rem;
+    top: -3rem;
+  }
 }

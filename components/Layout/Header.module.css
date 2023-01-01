@@ -34,3 +34,85 @@
 .header a.active {
   color: #4100fc;
 }
+
+/*drawer*/
+.drawer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #dbffca;
+}
+
+/*drawer list*/
+.drawer ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-direction: column;
+}
+
+/*drawer list item*/
+.drawer li {
+  margin: 1rem 10rem;
+}
+/*drawer list item hover*/
+.drawer li:hover {
+  color: #4100fc;
+}
+
+/*drawer list item link*/
+.drawer a {
+  font-family: "Inter";
+  font-style: regular;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: black;
+}
+
+/*drawer list item link hover*/
+.drawer a:hover {
+  color: #4100fc;
+}
+
+/*remove default button style*/
+.menuBtn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.mobileHeader {
+  display: none;
+  padding: 1.5rem;
+}
+
+/*responsive header*/
+@media (max-width: 768px) {
+  .header {
+    display: none;
+  }
+
+  .mobileHeader {
+    display: flex;
+  }
+}
+
+/*responsive for big screens */
+@media (min-width: 1366px) {
+  .header {
+    height: 8.5rem;
+  }
+
+  .header li {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  .header a {
+    font-size: 1.5rem;
+  }
+}

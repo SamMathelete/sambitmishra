@@ -9,3 +9,25 @@
   text-align: center;
   font-size: 1.5rem;
 }
+
+/*responsive div and text*/
+@media (max-width: 768px) {
+  .mainBodyDesc {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 1.25rem;
+  }
+}
+
+/*responsive for big screens*/
+@media (min-width: 1366px) {
+  .mainBodyDesc {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    font-size: 2rem;
+  }
+}
