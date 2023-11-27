@@ -1,11 +1,11 @@
-import { FC } from "react";
+import { FC, ReactElement, ReactNode } from "react";
 import styles from "./TextBox.module.css";
 import Image from "next/image";
 import SambitImage from "../../assets/sambit.jpg";
 
 interface Props {
     title: string,
-    desc: string,
+    desc: ReactElement,
     titleClassName?: string,
     boxClassName?: string,
     descClassName?: string,
