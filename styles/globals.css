@@ -27,6 +27,20 @@ a {
   text-decoration: none;
 }
 
+.filler {
+  height: 25vh;
+        width: 100vw;
+        background-color: #dbffca
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #dbffca
+}
+
 * {
   box-sizing: border-box;
 }
@@ -37,17 +51,12 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background-color: #1a1a1a;
   }
-}
-
-/*browser dark mode*/
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+  .wrapper {
+    background-color: #1a1a1a;
   }
-  body {
-    color: white;
+  .filler {
     background-color: #1a1a1a;
   }
 }
