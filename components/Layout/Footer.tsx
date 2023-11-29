@@ -9,7 +9,8 @@ import { motion } from "framer-motion";
 
 const Footer: FC = () => {
   return (
-    <footer className={classes.mainDiv}>
+    <footer className={classes.cover}>
+    <div className={classes.mainDiv}>
       <motion.div whileHover={{ scale: 1.1 }} className={classes.subDiv}>
         <Link href="https://www.linkedin.com/in/thesambitmishra/">
           <Image className={classes.image} src={linkedin} alt="LinkedIn" />
@@ -38,6 +39,7 @@ const Footer: FC = () => {
           </Link>
         </div>
       </motion.div>
+    </div>
     </footer>
   );
 };

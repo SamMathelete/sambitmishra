@@ -31,6 +31,15 @@ a {
   box-sizing: border-box;
 }
 
+.footer-cover {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  height: 1rem;
+  overflow: hidden;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

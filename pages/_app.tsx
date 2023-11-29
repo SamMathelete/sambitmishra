@@ -8,6 +8,10 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Header />
       <Component {...pageProps} />
+      <div style={{
+        height: "25vh",
+        width: "100vw"
+      }} />
       <Footer />
     </>
   );

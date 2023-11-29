@@ -13,6 +13,7 @@
     margin: 2rem;
     border-radius: 20px;
     background-color: #f2ffcd;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .title {
@@ -40,11 +41,14 @@
     padding: 1rem;
     align-items: center;
     justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 50%;
 }
 
 .img {
     max-width: 100%;
     height: auto;
+
 }
 
 @media (max-width: 768px) {
@@ -67,3 +71,17 @@
         text-align: justify;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .mainDiv {
+      background-color: #526c12;
+    }
+  
+    .title {
+      color: rgb(200, 255, 0);
+    }
+
+    .desc {
+        color: rgb(200, 255, 0);
+    }
+  }
