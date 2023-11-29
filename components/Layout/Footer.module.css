@@ -50,7 +50,8 @@
 /*responsive footer image and text*/
 @media (max-width: 700px) {
   .cover {
-    height: 7rem
+    height: 7rem;
+    padding: 0.5rem
   }
   .subDiv {
     flex-direction: column;

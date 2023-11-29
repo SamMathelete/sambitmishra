@@ -74,14 +74,15 @@
 
 @media (prefers-color-scheme: dark) {
     .mainDiv {
-      background-color: #526c12;
+      background-color: #2d320d;
+    
     }
   
     .title {
-      color: rgb(200, 255, 0);
+      color: white;
     }
 
     .desc {
-        color: rgb(200, 255, 0);
+        color: white;
     }
   }
