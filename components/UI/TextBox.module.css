@@ -73,7 +73,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    .mainDiv {
+    .box {
       background-color: #2d320d;
     
     }

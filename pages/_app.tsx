@@ -10,7 +10,8 @@ export default function App({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
       <div style={{
         height: "25vh",
-        width: "100vw"
+        width: "100vw",
+        backgroundColor: "transparent"
       }} />
       <Footer />
     </>
