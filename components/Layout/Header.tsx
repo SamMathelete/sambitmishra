@@ -9,21 +9,22 @@ import { useRouter } from "next/router";
 
 const Header: FC = () => {
   const router = useRouter();
-  const currentPage = router.pathname;
-  const showLogoStatus = currentPage !== "/";
-  const [showLogo, setShowLogo] = useState<boolean>(showLogoStatus);
+  const [permanentLogo, setPermanentLogo] = useState<boolean>(false);
+  const [showLogo, setShowLogo] = useState<boolean>(false);
 
   useEffect(() => {
     if (router.pathname !== '/') {
       setShowLogo(true);
+      setPermanentLogo(true);
     } else {
       setShowLogo(false);
+      setPermanentLogo(false);
     }
     if (typeof window !== undefined && router.pathname === '/') {
       window.addEventListener("scroll", () => {
         setShowLogo(window.scrollY > 400);
       })
-    }
+    } 
   }, [router])
 
   const [drawer, setDrawer] = useState<boolean>(false);
@@ -59,7 +60,7 @@ const Header: FC = () => {
             <motion.li whileHover={{ scale: 1.1 }}>
               <Link href="/notes">Notes</Link>
             </motion.li>
-            <div className={`${classes.headerlogo} ${showLogo && classes.hlshow}`}>
+            <div className={`${classes.headerlogo} ${(permanentLogo || showLogo) && classes.hlshow}`}>
             <Image src={headerlogo} alt="Header Logo" style={{
               width: "100%",
               height: "100%"
@@ -95,7 +96,7 @@ const Header: FC = () => {
             <line x1="3" y1="18" x2="21" y2="18"></line>
           </svg>
         </button>
-        <div className={`${classes.mobileheaderlogo} ${showLogo && classes.hlshow}`}>
+        <div className={`${classes.mobileheaderlogo} ${(permanentLogo || showLogo) && classes.hlshow}`}>
             <Image src={headerlogo} alt="Header Logo" style={{
               width: "100%",
               height: "100%"
