@@ -1,10 +1,31 @@
 import Link from "next/link";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import classes from "./Header.module.css";
 import { motion } from "framer-motion";
 import { SwipeableDrawer } from "@mui/material";
+import headerlogo from "../../assets/Group 2.svg";
+import Image from "next/image";
+import { useRouter } from "next/router";
 
 const Header: FC = () => {
+  const router = useRouter();
+  const currentPage = router.pathname;
+  const showLogoStatus = currentPage !== "/";
+  const [showLogo, setShowLogo] = useState<boolean>(showLogoStatus);
+
+  useEffect(() => {
+    if (router.pathname !== '/') {
+      setShowLogo(true);
+    } else {
+      setShowLogo(false);
+    }
+    if (typeof window !== undefined && router.pathname === '/') {
+      window.addEventListener("scroll", () => {
+        setShowLogo(window.scrollY > 400);
+      })
+    }
+  }, [router])
+
   const [drawer, setDrawer] = useState<boolean>(false);
 
   const toggleDrawer =
@@ -36,10 +57,16 @@ const Header: FC = () => {
               <Link href="/blog">Blog</Link>
             </motion.li>
             <motion.li whileHover={{ scale: 1.1 }}>
-              <Link href="/dev">Dev</Link>
+              <Link href="/notes">Notes</Link>
             </motion.li>
+            <div className={`${classes.headerlogo} ${showLogo && classes.hlshow}`}>
+            <Image src={headerlogo} alt="Header Logo" style={{
+              width: "100%",
+              height: "100%"
+            }} />
+            </div>
             <motion.li whileHover={{ scale: 1.1 }}>
-              <Link href="/algo">Algo</Link>
+              <Link href="/works">Works</Link>
             </motion.li>
             <motion.li whileHover={{ scale: 1.1 }}>
               <Link href="/about">About</Link>
@@ -68,6 +95,12 @@ const Header: FC = () => {
             <line x1="3" y1="18" x2="21" y2="18"></line>
           </svg>
         </button>
+        <div className={`${classes.mobileheaderlogo} ${showLogo && classes.hlshow}`}>
+            <Image src={headerlogo} alt="Header Logo" style={{
+              width: "100%",
+              height: "100%"
+            }} />
+        </div>
         <SwipeableDrawer
           anchor="top"
           open={drawer}
@@ -94,11 +127,11 @@ const Header: FC = () => {
               onClick={toggleDrawer(false)}
               whileHover={{ scale: 1.1 }}
             >
-              <Link href="/dev">Dev</Link>
+              <Link href="/notes">Notes</Link>
             </motion.li>
             <motion.li whileHover={{ scale: 1.1 }}>
-              <Link onClick={toggleDrawer(false)} href="/algo">
-                Algo
+              <Link onClick={toggleDrawer(false)} href="/works">
+                Works
               </Link>
             </motion.li>
             <motion.li whileHover={{ scale: 1.1 }}>

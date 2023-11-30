@@ -27,11 +27,18 @@ a {
   text-decoration: none;
 }
 
+.filler2 {
+  height: 15vh;
+        width: 100vw;
+        background-color: #dbffca
+}
+
 .filler {
   height: 25vh;
         width: 100vw;
         background-color: #dbffca
 }
+
 
 .wrapper {
   display: flex;
@@ -58,5 +65,15 @@ a {
   }
   .filler {
     background-color: #1a1a1a;
+  }
+  .filler2 {
+    background-color: #1a1a1a;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .filler2 {
+    display: none;
   }
 }
