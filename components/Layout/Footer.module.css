@@ -36,14 +36,15 @@
 }
 
 .image {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
 }
 
 .text {
   font-family: "Inter";
+  font-size: 1.1rem;
   color: black;
 }
 
@@ -84,20 +85,20 @@
   }
 
   .image {
-    width: 3rem;
-    height: 3rem;
-    margin: 1.5rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin: 1.25rem;
   }
 
   .text {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .mainDiv {
     padding-left: 20rem;
     padding-right: 20rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 
