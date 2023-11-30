@@ -13,19 +13,19 @@ const Header: FC = () => {
   const [showLogo, setShowLogo] = useState<boolean>(false);
 
   useEffect(() => {
-    if (router.pathname !== '/') {
+    if (router.pathname !== "/") {
       setShowLogo(true);
       setPermanentLogo(true);
     } else {
       setShowLogo(false);
       setPermanentLogo(false);
     }
-    if (typeof window !== undefined && router.pathname === '/') {
+    if (typeof window !== undefined && router.pathname === "/") {
       window.addEventListener("scroll", () => {
         setShowLogo(window.scrollY > 400);
-      })
-    } 
-  }, [router])
+      });
+    }
+  }, [router]);
 
   const [drawer, setDrawer] = useState<boolean>(false);
 
@@ -60,12 +60,17 @@ const Header: FC = () => {
             <motion.li whileHover={{ scale: 1.1 }}>
               <Link href="/notes">Notes</Link>
             </motion.li>
-            <div className={`${classes.headerlogo} ${(permanentLogo || showLogo) && classes.hlshow}`}>
-            <Image src={headerlogo} alt="Header Logo" style={{
-              width: "100%",
-              height: "100%"
-            }} />
-            </div>
+            <motion.div
+              className={`${classes.headerlogo} ${
+                (permanentLogo || showLogo) && classes.hlshow
+              }`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 1 }}
+            >
+              <div className={classes.fname}>sambit</div>
+              <div className={classes.lname}>mishra</div>
+            </motion.div>
             <motion.li whileHover={{ scale: 1.1 }}>
               <Link href="/works">Works</Link>
             </motion.li>
@@ -96,12 +101,17 @@ const Header: FC = () => {
             <line x1="3" y1="18" x2="21" y2="18"></line>
           </svg>
         </button>
-        <div className={`${classes.mobileheaderlogo} ${(permanentLogo || showLogo) && classes.hlshow}`}>
-            <Image src={headerlogo} alt="Header Logo" style={{
-              width: "100%",
-              height: "100%"
-            }} />
-        </div>
+        <motion.div
+          className={`${classes.headerlogo} ${
+            (permanentLogo || showLogo) && classes.hlshow
+          }`}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
+        >
+          <div className={classes.fname}>sambit</div>
+          <div className={classes.lname}>mishra</div>
+        </motion.div>
         <SwipeableDrawer
           anchor="top"
           open={drawer}

@@ -10,25 +10,42 @@
 }
 
 .headerlogo {
-  display: flex;
+  background-color: transparent;
+  display: none;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 10%;
-  height: 10%;
-  display: none;
+}
+
+.fname {
+  position: relative;
+  font-family: "Inter";
+  color: black;
+  font-weight: 400;
+  font-size: 2.5rem;
+  top: 0.8rem
+}
+
+.lname {
+  position: relative;
+  font-family: "Inter";
+  color: #30d35d;
+  font-weight: 400;
+  font-size: 3.278rem;
+  top: -0.6rem;
+  text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
 }
 
 .mobileheaderlogo {
-  display: flex;
+  background-color: transparent;
+  display: none;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40%;
-  height: 40%;
-  display: none;
 }
 
 .hlshow {
-  display: block;
+  display: flex;
 }
 
 .menusvg {
@@ -126,7 +143,13 @@
   .header {
     display: none;
   }
-
+  .fname {
+    font-size: 2rem;
+  }
+  .lname {
+    font-size: 2.5rem;
+    top: -0.3rem;
+  }
   .mobileHeader {
     display: flex;
   }
@@ -138,9 +161,14 @@
     height: 8.5rem;
   }
 
+  .headerlogo {
+    width: 10rem;
+    height: 10rem
+  }
+
   .header li {
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
 
   .header a {
@@ -153,7 +181,13 @@
   .header {
     background-color: #1a1a1a;
   }
-
+  .fname {
+    color: white;
+  }
+  .lname {
+    color: #30d35d;
+    text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+  }
   .header a {
     color: white;
   }
